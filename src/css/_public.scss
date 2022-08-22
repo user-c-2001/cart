@@ -1,72 +1,183 @@
-*{
+* {
     margin: 0%;
     padding: 0%;
 }
-ul{
+
+ul {
     list-style: none;
 }
-.center{
+
+.center {
     width: 1080px;
     margin: 0 auto;
 }
-#Navigation{
+
+#Navigation {
     height: 48px;
     background-color: #333;
-    & ul{
+
+    & ul {
         height: 48px;
         float: right;
-        font-size: 12px;
-        li{
+        font-size: 14px;
+
+        li {
             float: left;
             padding: 0 14px;
             border-right: 1px solid #666;
             line-height: 14px;
             margin-top: 16px;
-            a{
-                color: #cfcfcf;
+
+            a {
+                color: #cbcbcb;
                 text-decoration: none;
-                &:hover{
+
+                &:hover {
                     color: #fff;
-                }  
+                }
             }
-            i{
-                font-size: 18px;
+
+            i {
+                font-size: 22px;
                 margin-right: 2px;
                 color: #b7b7b7;
                 vertical-align: middle;
             }
         }
-        .last{
+
+        .last {
             margin: 0;
             height: 48px;
             line-height: 48px;
             padding-right: 0;
             border: 0;
-            .go{
+
+            .go {
+                box-shadow: 0px 0px 5px #666;
                 display: none;
                 width: 126px;
                 height: 60px;
                 line-height: 30px;
-                font-size: 12px;
+                font-size: 14px;
                 text-align: center;
                 position: relative;
                 top: -1.5px;
-                left: -10px;
-                a{
+                left: 0;
+
+                a {
                     display: block;
                     height: 30px;
-                    &:hover{
+                    width: 126px;
+
+                    &:hover {
                         background-color: brown;
                     }
                 }
             }
-            i{
+
+            i {
                 margin-right: 10px;
                 margin-left: 8px;
             }
-            &:hover{
-                .go{
+
+            &:hover {
+                .go {
                     display: block;
+                }
+            }
+        }
+    }
+}
+
+#Search {
+    height: 71px;
+    padding-top: 20px;
+    margin-bottom: 5px;
+    box-sizing: border-box;
+
+    & .search- {
+        height: 51px;
+
+        .img {
+            display: block;
+            width: 123px;
+            height: 51px;
+            float: left;
+            background: url(../img/6.png) 50% no-repeat;
+            background-size: contain;
+        }
+
+        ul {
+            float: left;
+            margin-right: 306px;
+            margin-left: 128px;
+
+            li {
+                margin-top: 15px;
+                float: left;
+                margin-left: 23px;
+                font-size: 17px;
+                
+                font-weight: 500;
+                a{
+                    text-decoration: none;
+                    color: #666;
+                    &:hover{
+                        color: brown;
+                    }
+                }
+            }
+        }
+
+        .input {
+            width: 280px;
+            height: 28px;
+            margin-right: 20px;
+            margin-top: 14px;
+            float: left;
+            border-bottom: 1px solid #e7e7e7;
+            box-sizing: border-box;
+
+            input {
+                outline: none;
+                width: 243px;
+                height: 14px;
+                border: 0;
+            }
+
+            a {
+                text-decoration: none;
+                i {
+                    font-size: 20px;
+                    margin-right: 12px;
+                    color: #333;
+
+                    &:hover {
+                        color: brown;
+                    }
+                }
+            }
+        }
+
+        .go {
+            width: 33px;
+            height: 28px;
+            float: left;
+            margin-top: 15px;
+
+            a {
+                display: block;
+                width: 30px;
+                height: 28px;
+                text-decoration: none;
+
+                i {
+                    font-size: 24px;
+                    color: #333;
+
+                    &:hover {
+                        color: brown;
+                    }
                 }
             }
         }
