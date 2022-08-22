@@ -62,12 +62,13 @@ ul {
                 text-align: center;
                 position: relative;
                 top: -1.5px;
-                left: 0;
+                left: 0;     
 
                 a {
                     display: block;
                     height: 30px;
                     width: 126px;
+                    color:black;
 
                     &:hover {
                         background-color: brown;
@@ -76,8 +77,8 @@ ul {
             }
 
             i {
-                margin-right: 10px;
-                margin-left: 8px;
+                margin-right: 8px;
+                margin-left: 10px;
             }
 
             &:hover {
@@ -132,7 +133,7 @@ ul {
         .input {
             width: 280px;
             height: 28px;
-            margin-right: 20px;
+            margin-right: 26px;
             margin-top: 14px;
             float: left;
             border-bottom: 1px solid #e7e7e7;
