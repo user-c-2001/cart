@@ -7,11 +7,148 @@ ul {
     list-style: none;
 }
 
+@mixin smallbox($color,$margin-top,$font-size) {
+    color: $color;
+    margin-top: $margin-top;
+    font-size: $font-size;
+}
+
+//板心
 .center {
     width: 1080px;
     margin: 0 auto;
 }
+//侧边公共样式图片大小设置
+.size{
+    width: 88px;
+    height: 88px;
+}
+.size2{
+    width: 190px;
+    height: 152px;
+}
+//侧边第一个小格隐藏部分设置
+.first{
+    width: 190px;
+    height: 256px;
+    background-color: #fff;
+    .plaint{
+        @include smallbox(#333, 8px, 12px);
+    }
+    .phpne{
+        @include smallbox(#845f3f, 15px, 20px);
+    }
+    .date{
+        @include smallbox(#666, 1px, 12px);
+    }
+    .hotline{
+        @include smallbox(#333, 18px, 12px);
+    }
+    .service{
+        @include smallbox(#845f3f, 15px, 20px);
+    }
+    .data2{
+        @include smallbox(#666, 1px, 12px);
+    }
+}
+//侧边第二个小格隐藏部分设置
+.second{
+    width: 106px;
+    padding: 8px;
+    div{
+        margin-top: 12px;
+    }
+    p{
+        margin-top: 12px;
+    }
+}
+//第三个
+.thild{
+    .img2{
+        margin-top: 15px;
+        margin-bottom: 10px;
+    }
+}
+//第四个
+.four{
+    width: 155px;
+    div{
+        margin-top: 15px;
+        margin-bottom: 14px;
+    }
+}
+//侧边公共部分设置
+#Sidelist {
 
+    //整体
+    ul {
+        box-shadow: 0px 0px 15px rgb(227, 224, 224);
+        width: 81px;
+        height: 354px;
+        position: fixed;
+        top: 220px;
+        right: 10px;
+        padding: 0 5px;
+        box-sizing: border-box;
+        z-index: 1001;
+        background-color: #fff;
+
+        //每一个格子
+        li {
+            height: 70px;
+            border-bottom: 1px solid #e7e7e7;
+            text-align: center;
+            padding-top: 13px;
+            box-sizing: border-box;
+            position: relative;
+
+            //图标和字体跳转设置
+            a {
+                text-decoration: none;
+                display: block;
+                color: #333;
+
+                &:hover {
+                    color: #845f3f;
+                }
+
+                span {
+                    font-size: 12px;
+                }
+
+                i {
+                    font-size: 26px;
+                }
+            }
+
+            //划过显示盒子的样式
+            .hidden{
+                    display: none;
+                    position: absolute;
+                    top: 0;
+                    right: 70px;
+                    padding-right: 15px;
+                .box {
+                    box-shadow: 0px 0px 15px rgb(227, 224, 224);
+                    font-size: 12px;
+                    padding: 10px 18px;
+                    border: 1px solid #dfdfdf;
+                    background: #fff;
+                }  
+            }
+            
+            &:hover .hidden {
+                display: block;
+            }
+        }
+
+        // 最后一个格子的设置
+        .last {
+            border: none;
+        }
+    }
+}
+//顶部黑色部分设置
 #Navigation {
     height: 48px;
     background-color: #333;
@@ -89,7 +226,7 @@ ul {
         }
     }
 }
-
+//黑色区域下方  轮播图上方 设置
 #Search {
     height: 71px;
     padding-top: 20px;
@@ -118,7 +255,6 @@ ul {
                 float: left;
                 margin-left: 23px;
                 font-size: 17px;
-                
                 font-weight: 500;
                 a{
                     text-decoration: none;

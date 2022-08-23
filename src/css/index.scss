@@ -1,11 +1,14 @@
 @import 'public';
-#List{
+
+#List {
     height: 358px;
-    & .list{
+    //左边列表部分
+    & .list {
         width: 221px;
         height: 358px;
         float: left;
-        ul{
+        //所有li的大盒子
+        ul {
             box-sizing: border-box;
             padding: 12px 0;
             width: 221px;
@@ -15,32 +18,43 @@
             overflow: hidden;
             position: relative;
             z-index: 1000;
-            li{
+            //每一个li
+            li {
                 font-size: 14px;
                 padding: 0 30px;
                 box-sizing: border-box;
                 color: #fff;
-                span{
+
+                span {
                     margin-left: 3px;
                 }
-                .s1:hover{
+
+                .s1:hover {
                     color: #dfaf7e;
                 }
+                &:hover{
+                    background-color: rgba($color: #000000, $alpha: 0.15);
+                }
             }
-            &:hover{
+
+            &:hover {
                 height: 460.8px;
             }
         }
     }
-    & .slide{
+    //轮播部分
+    & .slide {
         float: left;
         width: 859px;
         height: 358px;
         background-color: aqua;
     }
 }
-#Viewlist{
-    ul{
+
+#Viewlist {
+
+    //五个大图标的大盒
+    ul {
         overflow: hidden;
         margin-top: 28px;
         padding: 0 28px;
@@ -49,76 +63,35 @@
         height: 160px;
         position: relative;
         z-index: 100;
-        li{
+
+        //每个图标
+        li {
             float: left;
             margin-right: 110px;
-            a{
+
+            // 跳转功能和设置基础样式
+            a {
                 text-decoration: none;
                 display: block;
                 width: 116px;
                 height: 139.2px;
                 text-align: center;
-                img{
+
+                img {
                     width: 116px;
                     height: 116px;
                 }
-                span{
+
+                span {
                     font-size: 14px;
                     color: #000;
                 }
             }
         }
-        .last{
+
+        // 最后一个大图标的设置
+        .last {
             margin: 0;
-        }
-    }
-}
-#Sidelist{
-    ul{
-        box-shadow: 0px 0px 15px rgb(227, 224, 224);
-        width: 81px;
-        height: 354px;
-        position: fixed;
-        top: 220px;
-        right: 10px;
-        padding: 0 5px;
-        box-sizing: border-box;
-        z-index: 1001;
-        li{
-            height: 70px;
-            border-bottom: 1px solid #e7e7e7;
-            text-align: center;
-            padding-top: 13px;
-            box-sizing: border-box;
-            a{
-                text-decoration: none;
-                display: block;
-                color: #333;
-                &:hover{
-                    color: #845f3f;
-                }
-            }
-            span{
-                font-size: 12px;
-            }
-            i{
-                font-size: 26px;
-            }
-            .hidden{
-                display: none;
-            }
-            &:hover .hidden{
-                display: block;
-            }
-            &:nth-child(0){
-                div{
-
-                }
-
-            }
-        }
-        .last{
-            border: none;
         }
     }
 }
