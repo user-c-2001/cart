@@ -2,7 +2,10 @@
     margin: 0%;
     padding: 0%;
 }
-
+body,html{
+    width: 100%;
+    height: 100%;
+}
 ul {
     list-style: none;
 }
@@ -90,7 +93,7 @@ ul {
         right: 10px;
         padding: 0 5px;
         box-sizing: border-box;
-        z-index: 1001;
+        z-index: 100;
         background-color: #fff;
 
         //每一个格子
@@ -221,6 +224,76 @@ ul {
             &:hover {
                 .go {
                     display: block;
+                }
+            }
+        }
+    }
+}
+//弹出层
+#mark{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.595);
+    position: absolute;
+    z-index: 500;
+    left: 0;
+    top: 0;
+    display: none;
+    .float{
+        width: 452px;
+        height: 296px;
+        background: #fff;
+        position: absolute;
+        z-index: 501;
+        top: 208px;
+        padding: 0 40px;
+        box-sizing: border-box;
+        .x{
+            font-size: 25px;
+            position: absolute;
+            z-index: 502;
+            right: 12px;
+            top: 2px;
+            color: black;
+            cursor: pointer;
+        }
+        h3{
+            margin-top: 40px;
+            text-align: center;
+            font-weight: 500;
+        }
+        p{
+            margin-top: 30px;
+            font-size: 14px;
+            span{
+                color: #9f8052;
+            }
+        }
+        div{
+            margin-top: 30px;
+            input{
+                text-decoration: none;
+                outline: none;
+                width: 178px;
+                height: 40px;
+                cursor: pointer;
+                border-radius: 2px;
+                font-size: 18px;
+                border: 1px solid #9f8052;
+            }
+            .one{
+                background-color: #9f8052;
+                margin-right: 15px;
+                color: #fff;
+                &:hover{
+                    opacity: 0.7;
+                }
+            }
+            .two{
+                color: #9f8052;
+                &:hover{
+                    color: #fff;
+                    background-color: #9f8052;
                 }
             }
         }
