@@ -7,6 +7,7 @@
         width: 221px;
         height: 358px;
         float: left;
+        position: relative;
         //所有li的大盒子
         ul {
             box-sizing: border-box;
@@ -24,7 +25,6 @@
                 padding: 0 30px;
                 box-sizing: border-box;
                 color: #fff;
-
                 span {
                     margin-left: 3px;
                 }
@@ -32,6 +32,7 @@
                 .s1:hover {
                     color: #dfaf7e;
                 }
+
                 &:hover{
                     background-color: rgba($color: #000000, $alpha: 0.15);
                 }
@@ -41,13 +42,73 @@
                 height: 460.8px;
             }
         }
+        .nav-detail{
+            font-size: 14px;
+            display: none;
+            position: absolute;
+            top: 0;
+            left: 221px;
+            width: 857px;
+            min-height: 316px;
+            height: auto;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            background-color: #fff;
+            border: 1px solid #eee;
+            .cate-name{
+                font-size: 18px;
+                font-weight: 700;
+                color: #805e3f;
+                padding-left: 33px;
+                margin-bottom: 11px;
+            }
+            .nav-row{
+                display: flex;
+                .cate-item{
+                    display: inline-flex;
+                    align-items: center;
+                    padding-left: 33px;
+                    padding-right: 34px;
+                    width: 67px;
+                    .name{
+                        color: #333;
+                        font-weight: 700;
+                        width: 56px;
+                        text-align: justify;
+                    }
+                    .img{
+                        margin-left: 5px;
+                        width: 6px;
+                        height: 12px;
+                        text-align: center;
+                        line-height: 12px;
+                        font-size: 16px;
+                    }
+                }
+                .cate-list{
+                    border-bottom: 1px dashed #e6e6e6;
+                    padding-top: 15px;
+                    padding-bottom: 15px;
+                    display: flex;
+                    flex-wrap: wrap;
+                    width: 673px;
+                    .cate-list-item{
+                        margin-right: 15px;
+                        white-space: nowrap;
+                        color: #666;
+                        text-decoration: none;
+                        outline: none;
+                    }
+                }
+            }
+        }
     }
     //轮播部分
     & .slide {
         float: left;
         width: 859px;
         height: 358px;
-        // background-color: aqua;
+        background-color: aqua;
     }
 }
 
@@ -61,8 +122,6 @@
         box-sizing: border-box;
         border-bottom: 1px solid #e7e7e7;
         height: 160px;
-        position: relative;
-        z-index: 100;
 
         //每个图标
         li {

@@ -16,7 +16,7 @@ ul {
     font-size: $font-size;
 }
 
-//板心
+//版心
 .center {
     width: 1080px;
     margin: 0 auto;
@@ -137,6 +137,8 @@ ul {
                     padding: 10px 18px;
                     border: 1px solid #dfdfdf;
                     background: #fff;
+                    position: relative;
+                    z-index: 1000;
                 }  
             }
             
@@ -151,16 +153,50 @@ ul {
         }
     }
 }
+//顶部登陆成功后隐藏样式设置
+.success {
+    box-shadow: 0px 0px 5px #666;
+    display: none;
+    width: 100px;
+    height: 180px;
+    line-height: 30px;
+    font-size: 14px;
+    text-align: center;
+    position: relative;
+    top: 48px;
+    background-color: #fff;
+
+    a {
+        display: block;
+        height: 30px;
+        width: 100px;
+        color:black;
+        text-decoration: none;
+        cursor: pointer;
+
+        &:hover {
+            background-color: brown;
+            color: #fff;
+        }
+    }
+    div{
+        position: absolute;
+        top: -20px;
+        left: 0;
+        width: 100px;
+        height: 20px;
+    }
+}
 //顶部黑色部分设置
 #Navigation {
     height: 48px;
     background-color: #333;
-
+        //大盒子
     & ul {
         height: 48px;
         float: right;
         font-size: 14px;
-
+        //每一格的设置
         li {
             float: left;
             padding: 0 14px;
@@ -176,7 +212,7 @@ ul {
                     color: #fff;
                 }
             }
-
+            //字体图标设置手机
             i {
                 font-size: 22px;
                 margin-right: 2px;
@@ -184,30 +220,49 @@ ul {
                 vertical-align: middle;
             }
         }
-
+        //登陆成功第一格的样式
+        .sli{
+            color: #fff;
+            text-align: center;
+            width: 80px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            position: relative;
+            a{
+                color: #fff;
+                cursor: pointer;
+            }
+            i{
+                position: absolute;
+                left: 80px;
+            }
+        }
+        //最后一格的设置
         .last {
             margin: 0;
             height: 48px;
             line-height: 48px;
             padding-right: 0;
             border: 0;
-
+            //划过最后一格显示的样式
             .go {
                 box-shadow: 0px 0px 5px #666;
                 display: none;
-                width: 126px;
+                width: 150px;
                 height: 60px;
                 line-height: 30px;
                 font-size: 14px;
                 text-align: center;
                 position: relative;
                 top: -1.5px;
-                left: 0;     
-
+                left: -10px;
+                background-color: #fff; 
+                //每一行的设置
                 a {
                     display: block;
                     height: 30px;
-                    width: 126px;
+                    width: 150px;
                     color:black;
 
                     &:hover {
@@ -215,12 +270,12 @@ ul {
                     }
                 }
             }
-
+            //字体图标设置 最右边下箭头的设置
             i {
                 margin-right: 8px;
                 margin-left: 10px;
             }
-
+            //划过最后一格显示隐藏
             &:hover {
                 .go {
                     display: block;
@@ -301,6 +356,7 @@ ul {
 }
 //黑色区域下方  轮播图上方 设置
 #Search {
+    //整体一行设置
     height: 71px;
     padding-top: 20px;
     margin-bottom: 5px;
@@ -351,7 +407,7 @@ ul {
             input {
                 outline: none;
                 width: 243px;
-                height: 14px;
+                height: 22px;
                 border: 0;
             }
 
