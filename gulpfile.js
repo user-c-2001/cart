@@ -43,7 +43,7 @@ let fnjS = function(){
         .pipe(babel({
             presets: ['@babel/env']
         }))
-        .pipe(concat('main.js'))
+        // .pipe(concat('main.js'))
         .pipe(uglify())
         .pipe(rename({suffix : '.min'}))
         .pipe(dest('./dist/js'));

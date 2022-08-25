@@ -2,12 +2,14 @@
 
 #List {
     height: 358px;
+
     //左边列表部分
     & .list {
         width: 221px;
         height: 358px;
         float: left;
         position: relative;
+
         //所有li的大盒子
         ul {
             box-sizing: border-box;
@@ -19,12 +21,14 @@
             overflow: hidden;
             position: relative;
             z-index: 200;
+
             //每一个li
             li {
                 font-size: 14px;
                 padding: 0 30px;
                 box-sizing: border-box;
                 color: #fff;
+
                 span {
                     margin-left: 3px;
                 }
@@ -33,16 +37,13 @@
                     color: #dfaf7e;
                 }
 
-                &:hover{
+                &:hover {
                     background-color: rgba($color: #000000, $alpha: 0.15);
                 }
             }
-
-            &:hover {
-                height: 460.8px;
-            }
         }
-        .nav-detail{
+        //隐藏的列表设置
+        .nav-detail {
             font-size: 14px;
             display: none;
             position: absolute;
@@ -55,28 +56,38 @@
             padding-bottom: 20px;
             background-color: #fff;
             border: 1px solid #eee;
-            .cate-name{
+            z-index: 1000;
+
+            &>.nav-bottom {
+                margin-top: 35px;
+            }
+
+            .cate-name {
                 font-size: 18px;
                 font-weight: 700;
                 color: #805e3f;
                 padding-left: 33px;
                 margin-bottom: 11px;
             }
-            .nav-row{
+
+            .nav-row {
                 display: flex;
-                .cate-item{
+
+                .cate-item {
                     display: inline-flex;
                     align-items: center;
                     padding-left: 33px;
                     padding-right: 34px;
                     width: 67px;
-                    .name{
+
+                    .name {
                         color: #333;
                         font-weight: 700;
                         width: 56px;
                         text-align: justify;
                     }
-                    .img{
+
+                    .img {
                         margin-left: 5px;
                         width: 6px;
                         height: 12px;
@@ -85,30 +96,90 @@
                         font-size: 16px;
                     }
                 }
-                .cate-list{
+
+                .cate-list {
                     border-bottom: 1px dashed #e6e6e6;
                     padding-top: 15px;
                     padding-bottom: 15px;
                     display: flex;
                     flex-wrap: wrap;
                     width: 673px;
-                    .cate-list-item{
+
+                    .cate-list-item {
                         margin-right: 15px;
                         white-space: nowrap;
                         color: #666;
                         text-decoration: none;
-                        outline: none;
+
+                        &:hover {
+                            color: crimson;
+                        }
                     }
                 }
             }
         }
     }
+
     //轮播部分
     & .slide {
+        // 轮播的大盒子
         float: left;
         width: 859px;
         height: 358px;
-        background-color: aqua;
+        overflow: hidden;
+
+        .swiper-pagination {
+            .swiper-pagination-bullet.swiper-pagination-bullet-active {
+                box-shadow: 0 0 0 4px #ccc;
+                background: #a7936e;
+                border: none;
+            }
+
+            .swiper-pagination-bullet {
+                opacity: 1;
+                width: 8px;
+                height: 8px;
+                display: inline-block;
+                border-radius: 500px;
+                cursor: pointer;
+                color: transparent;
+                outline: 0;
+                border: 1px solid #cecece;
+                background: #fff;
+                transition: all .5s;
+            }
+        }
+
+        .turn_left,
+        .turn_right {
+            position: absolute;
+            cursor: pointer;
+            width: 38px;
+            height: 38px;
+            font-size: 35px;
+            text-align: center;
+            line-height: 38px;
+            border-radius: 50%;
+            outline: 0;
+            background-color: rgba($color: #333, $alpha: 0.3);
+            top: 50%;
+            margin-top: -16px;
+            color: white;
+            --swiper-navigation-size: 24px;
+        }
+
+        .turn_left:hover,
+        .turn_right:hover {
+            background-color: #845f3f;
+        }
+
+        .swiper-button-disabled {
+            pointer-events: all;
+
+            &:hover {
+                background-color: #845f3f;
+            }
+        }
     }
 }
 
